@@ -3,7 +3,7 @@
 * o fatorial de um numero inteiro fornecido pelo usuario
 * Ex.: 5! = 120
 *
-* Uso do for no logar do while
+* Uso do for no lugar do while
 *
 * @author Marcelo Soares
 * @version 1.1
