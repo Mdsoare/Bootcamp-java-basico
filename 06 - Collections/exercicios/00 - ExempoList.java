@@ -143,8 +143,7 @@ class ExempoList {
 		
 		System.out.println("");
 		System.out.println("Confira se a lista esta vazia: ");
-		System.out.println("Lista atualizada: " + notas);
-		// System.out.println("Lista atualizada: " + notas.isEmpty()); // .isEmpty() retorna um boleano. Aqui esperado true
-		
+		// System.out.println("Lista atualizada: " + notas);
+		if (notas.isEmpty()) System.out.println("A lista esta vazia!"); // .isEmpty() retorna um boleano. Aqui esperado true
 	}
 }
