@@ -1,24 +1,23 @@
 /**
 * O codigo abaixo eh um exemplo de como utilizar a interface List para manipular listas de elementos
 *
-* O programa cria uma lista de notas de um aluno e realiza as seguintes operacoes:
-*
-* 1. Adiciona as sete notas na lista utilizando o metodo add da interface List.
-* 2. Imprime a posicao da nota 5.0 utilizando o metodo indexOf da interface List.
-* 3. Adiciona a nota 8.0 na posicao 4 da lista utilizando o metodo add da interface List.
-* 4. Substitui a nota 5.0 pela nota 6.0 utilizando o metodo set da interface List.
-* 5. Verifica se a nota 5.0 esta presente na lista utilizando o metodo contains da interface List.
-* 6. Imprime a lista na ordem de insercao dos elementos utilizando um loop foreach.
-*
-* Ao executar o programa, ele ira imprimir na saida padrao a lista atualizada e os resultados das operacoes realizadas.
+* Referencias:
+* https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html
+* https://www.devmedia.com.br/trabalhando-com-a-classe-list-no-java/34148
+* https://www.devmedia.com.br/java-collections-ordenacao-e-busca-com-o-metodo-sort-da-classe-collections/29444
+* https://www.baeldung.com/java-collections-remove-elements-matching-criteria
+* https://www.devmedia.com.br/java-metodo-para-calculo-de-media-aritmetica/1661
 *
 * @author Marcelo Soares
-* @version 1.0
+* @version 2.0
 * @since 2023-03-12
 */
 // import java.util.Arrays; // Se trabalhar com Arrays.asList
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
+import java.util.Iterator;
 
 class ExempoList {
 	
@@ -67,17 +66,85 @@ class ExempoList {
 		System.out.println("");
 		System.out.println("Confira se a nota 5.0 esta na lista: ");
 		
-		if (!notas.contains(5d)){
-		    	System.out.println("Nota nao encontrada...");
+		if (!notas.contains(5d)) System.out.println("Nota nao encontrada...");
+				
+		System.out.println("Imprima a lista na ordem de insercao dos elementos: "); 
+		for(Double nota : notas) System.out.println(nota); //Embora a List ja conserva a ondem de insercao, portanto era so imprimir "notas", vamos exemplificar usando foreach
+		
+		System.out.println("");
+		System.out.println("Exiba a terceira nota adicionada: ");
+		System.out.println(notas.get(2)); //OBS: O indice inicia com "0"
+		
+		System.out.println("");
+		System.out.println("Exiba a menor nota: ");
+		System.out.println(Collections.min(notas));  // Como existe um metodo nativo em List vamos usar Collections
+		
+		System.out.println("");
+		System.out.println("Exiba a maior nota: ");
+		System.out.println(Collections.max(notas)); // Como existe um metodo nativo em List vamos usar Collections
+		
+		System.out.println("");
+		System.out.println("Exiba a soma dos valores: "); // Tb nao existe metodo nativo em List para isso. Usaremos o Iterator
+ 		
+		Iterator<Double> iterator1 = notas.iterator(); // variavel iterator para realizar a interacao com a lista
+		Double soma = 0d; // Variavel de controle para while
+		while (iterator1.hasNext()){ // Enquanto tiver no iterator o proximo elemento faca:
+			Double next = iterator1.next(); // variavel q recebera o falor da iteracao
+			soma += next; // adiciona o valor a variavel soma 
 		}
 		
-		System.out.println("Imprima a lista na ordem de insercao dos elementos: "); 
-		/* Neste caso eh so imprimir msm, pq a List ja faz isso!
-		 * System.out.println("Lista : " + notas.toString());
-		 *
-         * Impressao usando foreach apenas como exemplo:
-        */
-		for(Double nota : notas) System.out.println(nota);
+		System.out.println(soma); // exibe o resultado da soma.
+
+		/* 
+		* OBS: Existem outras formas, por exemplo:
+		*
+		* Double soma = 0;
+		* for (Double nota : notas) {
+		*	soma += nota;
+		* }
+		* System.out.println(soma);
+		*/
 				
+		System.out.println("");
+		System.out.println("Exiba a media das notas: ");
+		double media = soma / notas.size(); // size retorna um inteiro
+		System.out.println(media);
+	
+		System.out.println("");
+		System.out.println("Remova a nota 0.0: ");
+		notas.remove(0d); // remove trabalha com posicao ou valor. Aqui foi usado o valor. Tb eh valido usar notas.remove(Double.valueOf(0)) ou notas.remove(new Double(0))
+		System.out.println("Lista atualizada: " + notas);
+	
+		System.out.println("");
+		System.out.println("Remova a nota da posicao 0: ");
+		notas.remove(0);
+		System.out.println("Lista atualizada: " + notas);
+	
+		System.out.println("");
+		System.out.println("Remova as notas menores que 7 e exiba a lista atualizada: ");
+			
+		Iterator<Double> iterator2 = notas.iterator(); 
+		while(iterator2.hasNext()){
+			Double next = iterator2.next();
+			if (next < 7d) iterator2.remove();
+		}
+		
+		System.out.println("Lista atualizada: " + notas);
+		
+		/* OBS: Existem outras formas, por exemplo:
+		 *
+		 *	notas.removeIf(nota -> nota < 7);
+		 * System.out.println("Lista atualizada: " + notas);
+		*/
+		
+		System.out.println("");
+		System.out.println("Apague toda a lista: ");
+		notas.clear();
+		
+		System.out.println("");
+		System.out.println("Confira se a lista esta vazia: ");
+		System.out.println("Lista atualizada: " + notas);
+		// System.out.println("Lista atualizada: " + notas.isEmpty()); // .isEmpty() retorna um boleano. Aqui esperado true
+		
 	}
 }
