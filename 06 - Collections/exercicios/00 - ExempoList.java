@@ -107,7 +107,7 @@ class ExempoList {
 				
 		System.out.println("");
 		System.out.println("Exiba a media das notas: ");
-		double media = soma / notas.size(); // size retorna um inteiro
+		double media = soma / notas.size(); // size retorna o tamanho da lista (um inteiro)
 		System.out.println(media);
 	
 		System.out.println("");
