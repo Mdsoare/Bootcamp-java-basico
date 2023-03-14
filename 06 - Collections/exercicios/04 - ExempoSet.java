@@ -13,6 +13,7 @@ import java.util.TreeSet;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
+import java.text.DecimalFormat;
 
 class ExempoSet {
 	
@@ -53,18 +54,24 @@ class ExempoSet {
 		System.out.println("");
 		System.out.println("Exiba a maior nota: ");
 		System.out.println(Collections.max(notas)); // Como existe um metodo nativo em Set vamos usar Collections
+		
+		System.out.println("");
+		System.out.println("Exiba a soma das notas: ");
 		Iterator<Double> iterator1 = notas.iterator(); // variavel iterator para realizar a interacao
 		Double soma = 0d; // Variavel de controle para while
 		while (iterator1.hasNext()){ // Enquanto tiver no iterator o proximo elemento faca:
 			Double next = iterator1.next(); // variavel q recebera o falor da iteracao
 			soma += next; // adiciona o valor a variavel soma 
 		}
-		System.out.println(soma); // exibe o resultado da soma
+		//Arredondando a saida: necessario "import java.text.DecimalFormat;"
+		DecimalFormat df = new DecimalFormat("#.##");
+		String somaFormatada = df.format(soma);
+		System.out.println(somaFormatada); // exibe o resultado da soma
 		
 		System.out.println("");
 		System.out.println("Exiba a media das notas: ");
 		Double media = (soma / notas.size());
-		System.out.println(media);
+		System.out.println(media); // exibe o resultado nao arredondado
 						
 		System.out.println("");
 		System.out.println("Remova a nota 0: ");
