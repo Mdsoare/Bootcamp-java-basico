@@ -81,7 +81,7 @@ class Gato implements Comparable<Gato>{ //Define a classe Gato e implementa a in
 	public String toString(){ // Necessario porque os atributos sao private. Do contrario seriam impressos os enderecos de memoria
 		return "{" +
 				"nome='" + nome + '\'' +
-				", idade=" + idade +
+				", idade='" + idade + '\'' +
 				", cor='" + cor + '\'' +
 				'}';
 	}
@@ -91,31 +91,32 @@ class Gato implements Comparable<Gato>{ //Define a classe Gato e implementa a in
 		return this.getNome().compareToIgnoreCase(gato.getNome());
 	}
 
-	class ComparatorIdade implements Comparator<Gato>{ // Necessario pq ja existe uma comparacao com o metodo compareTo
-		@Override
-		public int compare(Gato g1, Gato g2){
-			return Integer.compare(g1.getIdade(), g2.getIdade());
-		}
-	}
+}
 
-	class ComparatorCor implements Comparator<Gato>{ 
-		@Override
-		public int compare(Gato g1, Gato g2){
-			return g1.getCor().compareToIgnoreCase(g2.getCor());
-		}
+class ComparatorIdade implements Comparator<Gato>{ // Necessario pq ja existe uma comparacao com o metodo compareTo
+	@Override
+	public int compare(Gato g1, Gato g2){
+		return Integer.compare(g1.getIdade(), g2.getIdade());
 	}
+}
+
+class ComparatorCor implements Comparator<Gato>{ 
+	@Override
+	public int compare(Gato g1, Gato g2){
+		return g1.getCor().compareToIgnoreCase(g2.getCor());
+	}
+}
 	
-	class ComparatorNomeCorIdade implements Comparator<Gato>{ 
-		@Override
-		public int compare(Gato g1, Gato g2){
+class ComparatorNomeCorIdade implements Comparator<Gato>{ 
+	@Override
+	public int compare(Gato g1, Gato g2){
 			
-			int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
-			if (nome != 0 ) return nome;
-			
-			int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
-			if (cor != 0 ) return cor;
-			
-			return Integer.compare(g1.getIdade(), g2.getIdade());
-		}
+		int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+		if (nome != 0 ) return nome;
+		
+		int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+		if (cor != 0 ) return cor;
+		
+		return Integer.compare(g1.getIdade(), g2.getIdade());
 	}
 }
