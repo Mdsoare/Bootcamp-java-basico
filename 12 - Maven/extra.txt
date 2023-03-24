@@ -1,0 +1,42 @@
+Curso de gerenciamento de dependências build
+
+Aula 2 - Criando um projeto via linha de comando
+Apêndice aos slide 25 a 29
+
+1º) Abra o prompt na pasta do projeto (ex.: c:\projects) e digite:
+
+mvn archetype:generate -DgroupId=one.digitalinnovation -DartifactId=quick-start-maven -Darchetype=maven-archetype-quickstart -DinteractiveMode=false
+
+OBS: O comando acima busca um "arche" tipo `maven-archetype-quickstart`, que é um template existente na internet, nos repositórios do maven, 
+com um padrão/estrutura de um projeto Java já pré-definido. O nome do projeto será `quick-start-maven`, cujo groupId  `one.digitalinnovation`.
+
+O recurso `archetype`facilita a geração automatica de um projeto com base em um template. Exite disponíveis na internet varios templates disponíveis 
+de vários tipos
+Fonte: https://www.youtube.com/watch?v=JZiQmc2CncY&ab_channel=DIO
+
+Apêndice aos slide 30 a 32
+
+1º) Para compilar as classes de um projeto:
+
+mvn compile
+
+O comando acima compila todos os códigos e reúne-os na pasta `target` do projeto
+
+
+2º) Para testar (validar) a aplicação:
+
+mvn test
+
+3º) Para gerar o arquivo executável java (pacote .jar): 
+
+mvn package
+
+O arquivo *.jar estará em `target`
+
+4º) Para limpar a pasta do projeto (apagar a pasta `target`):
+
+mvn clean
+
+5º) Publicar um componente local no repositório:
+
+mvn install (OBS: É necessário configurar o arquivo pom.xml na tag <dependencies> inserir ou alterar o componente <dependency>)
