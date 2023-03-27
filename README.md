@@ -7,11 +7,11 @@
 <h3 align="center"><font face="Helvetica"> Resumo: </font></h3>
 -->
 
-<p align="center"><font face="Helvetica"> Treinamento realizado entre 05 de janeiro a 27 abril de 2023. </font></p>
+<p align="center"><font face="Helvetica"> Treinamento realizado entre 05 de janeiro a 27 março de 2023. </font></p>
 <p> </p>
 <h3> <font face="Helvetica"> 📖 Alguns dos assuntos abordados 📖</font></h3>
 
-<ol>
+<ul>
 	<li>Introdução ao Git / GitHub</li>
 	<li>Fundamentos: Programação / Java </li>
 	<li>Estrutura de Repetição e Arrays em Java</li>
@@ -26,7 +26,7 @@
 	<li>Introdução ao Apache Maven</li>
 	<li>Spring Boot</li>
 	<li>Desafio 3</li>
-</ol>
+</ul>
 
 <p> </p>
 <h3 align="center"><font face="Helvetica"> ✨ ️Redes Socias ✨</font></h3>
