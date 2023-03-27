@@ -1,0 +1,5 @@
+Aula Praticando com Spring: Conhecendo o Projeto Base:
+https://www.youtube.com/watch?v=JIN0HdQihuI&ab_channel=DIO
+
+Aula Praticando com Spring: Padrões de Projeto em uma API REST:
+https://www.youtube.com/watch?v=YgNJ4kfjQyk&ab_channel=DIO
