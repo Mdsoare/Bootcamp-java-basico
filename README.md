@@ -11,7 +11,7 @@
 <p> </p>
 <h3> <font face="Helvetica"> 📖 Alguns dos assuntos abordados 📖</font></h3>
 
-	<ul><font face="Helvetica"> 
+	<ol><font face="Helvetica"> 
 		<li>Introdução ao Git / GitHub</li>
 		<li>Fundamentos: Programação / Java </li>
 		<li>Estrutura de Repetição e Arrays em Java</li>
@@ -26,7 +26,7 @@
 		<li>Introdução ao Apache Maven</li>
 		<li>Spring Boot</li>
 		<li>Desafio 3</li>
-	</font></ul>
+	</font></ol>
 
 <p> </p>
 <h3 align="center"><font face="Helvetica"> ✨ ️Redes Socias ✨</font></h3>
