@@ -11,22 +11,22 @@
 <p> </p>
 <h3> <font face="Helvetica"> 📖 Alguns dos assuntos abordados 📖</font></h3>
 
-	<ol><font face="Helvetica"> 
-		<li>Introdução ao Git / GitHub</li>
-		<li>Fundamentos: Programação / Java </li>
-		<li>Estrutura de Repetição e Arrays em Java</li>
-		<li>Criação de Métodos em Java</li>
-		<li>Desafio 1</li>
-		<li>Introdução a POO</li>
-		<li>Collections</li>
-		<li>Debugging</li>
-		<li>Tratamento de Exceções</li>
-		<li>Desafio 2</li>
-		<li>Protocolos de Comunicação de Internet</li>
-		<li>Introdução ao Apache Maven</li>
-		<li>Spring Boot</li>
-		<li>Desafio 3</li>
-	</font></ol>
+<ol>
+	<li>Introdução ao Git / GitHub</li>
+	<li>Fundamentos: Programação / Java </li>
+	<li>Estrutura de Repetição e Arrays em Java</li>
+	<li>Criação de Métodos em Java</li>
+	<li>Desafio 1</li>
+	<li>Introdução a POO</li>
+	<li>Collections</li>
+	<li>Debugging</li>
+	<li>Tratamento de Exceções</li>
+	<li>Desafio 2</li>
+	<li>Protocolos de Comunicação de Internet</li>
+	<li>Introdução ao Apache Maven</li>
+	<li>Spring Boot</li>
+	<li>Desafio 3</li>
+</ol>
 
 <p> </p>
 <h3 align="center"><font face="Helvetica"> ✨ ️Redes Socias ✨</font></h3>
