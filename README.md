@@ -2,11 +2,6 @@
 
 <h3 align="center"><font face="Helvetica"> Orange Tech + | BackEnd com Java ☕</font></h3>
 
-<!--
-<p> </p>
-<h3 align="center"><font face="Helvetica"> Resumo: </font></h3>
--->
-
 <p align="center"><font face="Helvetica"> Treinamento realizado entre 05 de janeiro a 27 de março de 2023. </font></p>
 <p> </p>
 <h3> <font face="Helvetica"> 📖 Alguns dos assuntos abordados 📖</font></h3>
