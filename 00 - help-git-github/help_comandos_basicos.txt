@@ -9,6 +9,20 @@ $ cd git-course
 
 $ git init 
 
+# ADICIONANDO O ARQUIVO README.md
+
+$ touch README.md
+$ git add README.md
+$ git commit -m "Meu primeiro commit"
+
+# ADICIONANDO O REPOSITÓRIO REMOTO:
+
+$ git remote add origin git@github.com:Mdsoare/Bootcamp-dio-java-basico.git
+
+# ENVIANDO O ARQUIVO AO REPOSITÓRIO REMOTO:
+
+$ git push -u origin main
+
 # CICLO DE VIDA DE UM ARQUIVO
 
 * UNTRACKED --> O ARQUIVO ESTÁ NO REPOSITÓRIO LOCAL, MAS O GIT AINDA NÃO O RECONHECE (sem $ git add ou git commit -am "comentario")
