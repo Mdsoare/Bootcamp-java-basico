@@ -11,17 +11,22 @@ $ git init
 
 # ADICIONANDO O ARQUIVO README.md
 
-$ touch README.md
+$ echo "# help git" >> README.MD
 $ git add README.md
 $ git commit -m "Meu primeiro commit"
 
 # ADICIONANDO O REPOSITÓRIO REMOTO:
 
-$ git remote add origin git@github.com:Mdsoare/Bootcamp-dio-java-basico.git
+$ git remote add origin git@github.com:seu-user/seu-repositorio.git
 
 # ENVIANDO O ARQUIVO AO REPOSITÓRIO REMOTO:
 
-$ git push -u origin main
+$ git push origin main
+
+# VISUALIZANDO SEU REPOSITÓRIO REMOTO:
+
+$ git remote
+$ git remote -v
 
 # CICLO DE VIDA DE UM ARQUIVO
 
