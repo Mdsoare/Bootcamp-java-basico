@@ -164,10 +164,8 @@ $ git reset HEAD~1
 # RESET NO ÚLTIMO COMMIT, ~N INDICA O NÚMERO A DE COMMITS, EX.: $ git reset HEAD~2 RESET NOS DOIS ÚLTIMOS COMMITS 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# OUTRAS OPÇÕES DE RESET APÓS COMMIT ANTES DO HASH DESEJADO
-$ git log
+# OUTRAS OPÇÕES DE RESET
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # MATA O COMMIT, MAS MANTEM AS MODIFICAÇÕES DO ARQUIVO, PRONTO PARA UM NOVO COMMIT
 $ git reset --soft 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
 # OBS: Este é o padrão, semelhante a: $ git reset 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
