@@ -95,7 +95,7 @@ Marcelo Soares (14):
 $ git shortlog -sn
     14  Marcelo Soares
 
-# COMANDO PARA VISUALIZAR DE FORMA GRÁFICA OS BRANCHTS E VERSÕES
+# COMANDO PARA VISUALIZAR DE FORMA GRÁFICA OS BRANCH E VERSÕES
 $ git log --graph
 * commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
 | Author: Marcelo Soares <marcelo.soares92@gmail.com>
@@ -176,3 +176,31 @@ $ git reset --mixed 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
 
 # IGNORA TODAS AS AÇÕES ANTES DAS MODIFICAÕES
 $ git reset --hard 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
+
+
+# CRIANDO UM BRANCH
+
+$ git checkout -b "Nome-do-Branch"
+
+# VISUALIZANDO SEUS BRANCH:
+
+$ git branch
+
+# NAVEGANDO ENTRE BRANCH:
+
+$ git branch
+$ git checkout "Nome-do-Branch"  ###> $ git checkout main
+
+# DELETANDO UM BRANCH
+
+$ git branch -D "Nome-do-Branch"
+
+# UNINDO BRANCHS
+
+# PRESERVANDO HISTÓRICO:
+
+$ git merge "Nome-do-Branch"
+
+# SEM PRESERVAÇÃO DO HISTÓRICO - I.E., MOVE A BRANCH PARA O TOPO DO HISTÓRICO:
+
+$ git rebase "Nome-do-Branch"
