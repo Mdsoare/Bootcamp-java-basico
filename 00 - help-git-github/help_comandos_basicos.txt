@@ -1,0 +1,159 @@
+# INICIALIZAR UM REPOSITÓRIO:
+
+# CRIANDO UM DIRETÓRIO LOCAL E ACESSANDO-O
+
+$ mkdir git-course
+$ cd git-course
+
+# INICIANDO O REPOSITÓRIO LOCAL:
+
+$ git init 
+
+# CICLO DE VIDA DE UM ARQUIVO
+
+* UNTRACKED --> O ARQUIVO ESTÁ NO REPOSITÓRIO LOCAL, MAS O GIT AINDA NÃO O RECONHECE (sem $ git add ou git commit -am "comentario")
+* UNMODIFIED --> ARQUIVO ADICIONADO AO REPOSITÓRIO git add ARQUIVO(S) OU "COMMITADO"
+* MODIFIED --> ARQUIVO EDITADO
+* STAGED --> ARQUIVO PRONTO PARA O COMMIT, E APÓS O COMMIT ELE VOLTA PARA O ESTÁGIO "UNMODIFIED"
+
+# REPORTAR COMO ESTÁ O REPOSITÓRIO:
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+# ADICIONANDO UM ARQUIVO AO GIT:
+
+$ git add NOME_DO_ARQUIVO ou $ git add * ou $ git commit -am "comentario" (neste caso já adiciona e commita)
+
+
+# COMANDO PARA VISUALIZAR HISTÓRICO DE COMMITS
+
+$ git log
+commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
+Author: Marcelo Soares <marcelo.soares92@gmail.com>
+Date:   Sun Apr 2 16:36:32 2023 -0300
+
+    Atualizando README
+
+# COMANDO PARA VISUALIZAR HISTÓRICO DE COMMITS COM MAIS DETALHES
+$ git log --decorate
+commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
+Author: Marcelo Soares <marcelo.soares92@gmail.com>
+Date:   Sun Apr 2 16:36:32 2023 -0300
+
+    Atualizando README
+
+# COMANDO PARA VISUALIZAR HISTÓRICO DE COMMITS FILTRADO POR AUTOR
+$ git log --author="Marcelo"
+commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
+Author: Marcelo Soares <marcelo.soares92@gmail.com>
+Date:   Sun Apr 2 16:36:32 2023 -0300
+
+    Atualizando README
+
+# COMANDO PARA VISUALIZAR O AUTOR, Nº DE COMMITS, E QUAIS FORAM 
+$ git shortlog
+Marcelo Soares (14):
+      Initial commit
+      Adicionando arquivo README ao repositório
+      Adicionando diretório ao repositório
+      Exercícios propostos
+      Delete 00 - Conhecendo o Linux directory
+      Desafio 1
+      Desafio 1 - Exercícios e solução
+      Atualizando arquivo README.md
+      Add files via upload
+      Create help.txt
+      Update README.md
+      Atualizando repositório
+      Atualizando repositório
+      Atualizando README
+
+# COMANDO PARA VISUALIZAR A QUANTIDADE DE COMMITS E O AUTOR
+$ git shortlog -sn
+    14  Marcelo Soares
+
+# COMANDO PARA VISUALIZAR DE FORMA GRÁFICA OS BRANCHTS E VERSÕES
+$ git log --graph
+* commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
+| Author: Marcelo Soares <marcelo.soares92@gmail.com>
+| Date:   Sun Apr 2 16:36:32 2023 -0300
+|
+|     Atualizando README
+
+
+# COMANDO PARA VISUALIZAR DE HISTÓRICO DE UM COMMIT PELO HASH 
+$ git show 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
+commit 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
+Author: Marcelo Soares <106860930+Mdsoare@users.noreply.github.com>
+Date:   Sun Apr 2 15:05:28 2023 -0300
+
+    Add files via upload
+
+diff --git a/00-Conhecendo-o-Linux/01 - Linux - Discos.pdf b/00-Conhecendo-o-Linux/01 - Linux - Discos.pdf
+new file mode 100644
+index 0000000..30aaeef
+--- /dev/null
++++ b/00-Conhecendo-o-Linux/01 - Linux - Discos.pdf
+@@ -0,0 +1,38 @@
++Discos, sistemas de arquivos e
++partições
++
++  Denilson Bonatti
++  Tech Lead - DIO
++^LTipos de discos
++^LSistemas de arquivos
+
+
+# COMANDO PARA VISUALIZAR AS DIFERENÇAS ANTES DO ENVIO / COMMIT
+
+$ git diff
+diff --git a/README.md b/README.md
+index 084d057..a3cddf4 100644
+--- a/README.md
++++ b/README.md
+@@ -26,3 +26,6 @@
+ </p>
+
+ <p align="center"><font face="Helvetica"> Disponibilizado por Marcelo Soares ® </font></p>
++
++
++teste
+
+OBS: ONDE TEM "+" É A DIFERENÇA DO QUE FOI ACRESCENTADO NO ARQUIVO
+
+
+# COMANDO PARA VISUALIZAR APENAS O NOME DOS ARQUIVOS MODIFICADOS
+$ git diff --name-only
+
+
+# DESFAZENDO ALTERAÇÕES ANTES DE UM COMMIT:
+
+$ git checkout README.md
+Updated 1 path from the index
+
+
+# DESFAZENDO ALTERAÇÕES APÓS UM COMMIT:
+
+$ git reset HEAD README.md
+Unstaged changes after reset:
+M       README.md
+
+$ git checkout README.md
+Updated 1 path from the index
+
+# OUTRAS OPÇÕES DE RESET APÓS COMMIT ANTES DO HASH DESEJADO
+
+$ git log
+
+# MATA O COMMIT, MAS MANTEM AS MODIFICAÇÕES DO ARQUIVO, PRONTO PARA UM NOVO COMMIT
+$ git reset --soft 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
+
+# MATA O COMMIT, MAS MANTEM AS MODIFICAÇÕES DO ARQUIVO, ANTES DO GIT ADD
+$ git reset --mixed 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
+
+# IGNORA TODAS AS AÇÕES ANTES DAS MODIFICAÕES
+$ git reset --hard 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
