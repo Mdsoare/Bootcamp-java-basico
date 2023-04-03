@@ -1,42 +1,35 @@
 # INICIALIZAR UM REPOSITÓRIO:
 
 # CRIANDO UM DIRETÓRIO LOCAL E ACESSANDO-O
-
 $ mkdir git-course
 $ cd git-course
 
 # INICIANDO O REPOSITÓRIO LOCAL:
-
 $ git init 
 
 # ADICIONANDO O ARQUIVO README.md
-
 $ echo "# help git" >> README.MD
 $ git add README.md
 $ git commit -m "Meu primeiro commit"
 
 # ADICIONANDO O REPOSITÓRIO REMOTO:
-
 $ git remote add origin git@github.com:seu-user/seu-repositorio.git
 
 # ENVIANDO O ARQUIVO AO REPOSITÓRIO REMOTO:
-
 $ git push origin main
 
 # VISUALIZANDO SEU REPOSITÓRIO REMOTO:
-
 $ git remote
 $ git remote -v
 
 # CICLO DE VIDA DE UM ARQUIVO
-
+#
 * UNTRACKED --> O ARQUIVO ESTÁ NO REPOSITÓRIO LOCAL, MAS O GIT AINDA NÃO O RECONHECE (sem $ git add ou git commit -am "comentario")
 * UNMODIFIED --> ARQUIVO ADICIONADO AO REPOSITÓRIO git add ARQUIVO(S) OU "COMMITADO"
 * MODIFIED --> ARQUIVO EDITADO
 * STAGED --> ARQUIVO PRONTO PARA O COMMIT, E APÓS O COMMIT ELE VOLTA PARA O ESTÁGIO "UNMODIFIED"
 
 # REPORTAR COMO ESTÁ O REPOSITÓRIO:
-
 $ git status
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -44,12 +37,9 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 
 # ADICIONANDO UM ARQUIVO AO GIT:
-
 $ git add NOME_DO_ARQUIVO ou $ git add * ou $ git commit -am "comentario" (neste caso já adiciona e commita)
 
-
 # COMANDO PARA VISUALIZAR HISTÓRICO DE COMMITS
-
 $ git log
 commit f00e44135e46f391625ba01fd0ac62b75286c022 (HEAD -> main, origin/main, origin/HEAD)
 Author: Marcelo Soares <marcelo.soares92@gmail.com>
@@ -128,7 +118,6 @@ index 0000000..30aaeef
 
 
 # COMANDO PARA VISUALIZAR AS DIFERENÇAS ANTES DO ENVIO / COMMIT
-
 $ git diff
 diff --git a/README.md b/README.md
 index 084d057..a3cddf4 100644
@@ -150,22 +139,22 @@ $ git diff --name-only
 
 
 # DESFAZENDO ALTERAÇÕES ANTES DE UM COMMIT:
-
 $ git checkout README.md
+
 Updated 1 path from the index
 
 
 # DESFAZENDO ALTERAÇÕES APÓS UM COMMIT:
-
 $ git reset HEAD README.md
+
 Unstaged changes after reset:
 M       README.md
 
 $ git checkout README.md
+
 Updated 1 path from the index
 
 # OUTRAS OPÇÕES DE RESET APÓS COMMIT ANTES DO HASH DESEJADO
-
 $ git log
 
 # MATA O COMMIT, MAS MANTEM AS MODIFICAÇÕES DO ARQUIVO, PRONTO PARA UM NOVO COMMIT
@@ -178,29 +167,58 @@ $ git reset --mixed 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
 $ git reset --hard 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3
 
 
-# CRIANDO UM BRANCH
+# REVERTENDO UM COMMIT SEM USO DO RESET
+$ git revert 0a0cfe442f1ca6e0625b40e7d15652a4847ac0d3 ###>>> Reverte um commit sem apagar o commit anterior
 
+
+# CRIANDO UM BRANCH
 $ git checkout -b "Nome-do-Branch"
 
 # VISUALIZANDO SEUS BRANCH:
-
 $ git branch
 
 # NAVEGANDO ENTRE BRANCH:
-
 $ git branch
 $ git checkout "Nome-do-Branch"  ###> $ git checkout main
 
 # DELETANDO UM BRANCH
-
 $ git branch -D "Nome-do-Branch"
+
+# APAGANDO BRANCH DO REPOSITORIO REMOTO
+$ git push origin main :Nome-do-Branch
 
 # UNINDO BRANCHS
 
 # PRESERVANDO HISTÓRICO:
-
 $ git merge "Nome-do-Branch"
 
 # SEM PRESERVAÇÃO DO HISTÓRICO - I.E., MOVE A BRANCH PARA O TOPO DO HISTÓRICO:
-
 $ git rebase "Nome-do-Branch"
+
+# TRABALHANDO COM MODIFICAÇÃOES E STAND-BY:
+$ git stash  ###>>> Este comando conserva o estado de modificação para um arquivo, mas que não pode ser usado o commit nomomento.
+$ git stash apply ###>>> Este comando confirma o modfied e o arquivo volta a estar em condições de commit 
+$ git stash list ###>>> Exibe todos os stash disponíveis
+$ git stash clear ###>>> Remove todos os stash
+
+# CRIANDO ALIAS NO GIT
+
+EX: ALIAS PARA O COMANDO $ git status
+
+$ git config --global alias.s status
+$ git s
+
+# CRIANDO TAGS
+$ git tag -a 1.0.0 -m "README finalizado!"
+
+# SUBINDO AS TAGS
+$ git push origin main --tags
+
+# VISUALIZANDO SUAS TAGS:
+$ git tag
+
+# REMOVENDO UMA TAG:
+$ git tag -D 1.0.0 ###>>> Onde, 1.0.0 é a tag a ser excluída
+
+# APAGANDO TAG DO REPOSITORIO REMOTO
+$ git push origin main :1.0.0
