@@ -7,7 +7,7 @@
 <h3> <font face="Helvetica"> 📖 Alguns dos assuntos abordados 📖</font></h3>
 
 <ul>
-	<li>Fundamentos: Programação / Java </li>
+	<li>Fundamentos: Programação & Java </li>
 	<li>Estrutura de Repetição e Arrays em Java</li>
 	<li>Criação de Métodos em Java</li>
 	<li>Desafio 1</li>
