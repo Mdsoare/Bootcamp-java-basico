@@ -4,7 +4,7 @@
     <span>Orange Tech + | BackEnd com Java ☕</span>
 </h1>
 
-Repositório criado para fins educativos, com a disponibilização de materiais de apoio do Bootcamp **Orange Tech + | BackEnd com Java ☕** da <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"> [Digital Innovation One](https://www.dio.me/).
+Repositório criado para fins educativos, com a disponibilização de materiais de apoio do Bootcamp **Orange Tech + | BackEnd com Java** da <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"> [Digital Innovation One](https://www.dio.me/).
 
 [![Link do Curso](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://web.dio.me/track/orange-tech-backend) 
 [![Link do Curso](https://img.shields.io/badge/Acesse%20o%20Curso%20na%20Plataforma-E94D5F?style=for-the-badge)](https://web.dio.me/track/orange-tech-backend) 
