@@ -1,17 +1,16 @@
 <h1>
     <a href="https://www.dio.me/">
-     <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
+	    <img align="center" width="80px" src="https://hermes.dio.me/tracks/5443980d-31cb-4a9f-8dbd-065773810c04.png"></a>
     <span>Orange Tech + | BackEnd com Java ☕</span>
 </h1>
 
-Repositório criado para fins educativos, com a disponibilização de materiais de apoio do Bootcamp **Orange Tech + | BackEnd com Java ☕** da [Digital Innovation One](https://www.dio.me/).
-<br>
-<img width="70px" background-color="black" src="https://hermes.digitalinnovation.one/assets/diome/logo.svg">
+Repositório criado para fins educativos, com a disponibilização de materiais de apoio do Bootcamp **Orange Tech + | BackEnd com Java ☕** da <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"> [Digital Innovation One](https://www.dio.me/).
 
 [![Link do Curso](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://web.dio.me/track/orange-tech-backend) 
 [![Link do Curso](https://img.shields.io/badge/Acesse%20o%20Curso%20na%20Plataforma-E94D5F?style=for-the-badge)](https://web.dio.me/track/orange-tech-backend) 
+<br>
 
-## Detalhes do Bootcamp 🎯
+## Objetivo 🎯
 O bootcamp tem como objetivo formar desenvolvedores Java. No Orange Tech+ Back-End são disponibilizadas mais de 80 horas para transformar sua carreira com uma formação completa, com acesso a módulos sobre a linguagem Java que vão desde o básico e introdução ao ambiente até códigos mais avançados e frameworks mais usados.
 
 ## Ferramentas 🖥️
