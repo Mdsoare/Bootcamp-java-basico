@@ -28,6 +28,8 @@ public class Main {
                     , conta1.getSaldo()));
         } catch (InputMismatchException e) {
             System.out.println("Erro: " + e.getMessage());
+        } finally {
+            sc.close();
         }
     }
 }
